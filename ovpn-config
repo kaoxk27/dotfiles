@@ -1,0 +1,7 @@
+## append this to each ovpn profile
+
+dhcp-option DOMAIN-ROUTE .
+script-security 2
+up /etc/openvpn/scripts/update-systemd-resolved
+down /etc/openvpn/scripts/update-systemd-resolved
+down-pre
