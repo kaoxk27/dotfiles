@@ -46,8 +46,8 @@ ${voffset 30}${goto 82}/home
 ${goto 82}${font Zekton:style=Bold:size=10}${fs_used /home}
 ${voffset 35}${goto 25}${font Zekton:style=Bold:size=10}/dev/sda${goto 113}Wireless${font Zekton:style=Bold:size=11}${color1}${goto 217}RAM
 ${goto 30}${font Zekton:style=Bold:size=9}${diskio /dev/sda}${goto 120}${downspeed wlan0}${goto 220}${font Zekton:style=Bold:size=11}${memperc}%
-${voffset 16}${font Zekton:style=Bold:size=11}${goto 83}ROOT${goto 175}SWAP
-${font Zekton:style=Bold:size=9}${goto 83}${fs_used /}${goto 175}${swapperc}%
+${voffset 16}${font Zekton:style=Bold:size=11}${goto 83}ROOT${goto 175}BATT
+${font Zekton:style=Bold:size=9}${goto 83}${fs_used /}${goto 175}${exec  acpi -b | cut -d "," -f2 | cut -d " " -f2}
 ${font Zekton:style=Bold:size=10}${voffset 40}${goto 50}kernel${goto 130} ${kernel}
 ${font Zekton:style=Bold:size=10}${goto 50}machine${goto 130}${machine}
 
